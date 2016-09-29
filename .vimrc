@@ -12,17 +12,21 @@ set incsearch
 set history=100
 set ruler
 set backspace=indent,eol,start
+set laststatus=0
+set statusline=[%t]%y
+set statusline+=%=Current:[\ %-3l/\ %-3L]
 
 
 "fold func
 "set foldmethod=syntax
-"set foldlevel=100
-"set foldopen-=search
+"set foldlevelstart=99
 
 
 map <C-n> :NERDTreeToggle<CR>
 syntax on
 let g:neocomplete#enable_at_startup = 1
+
+
 
 "for syntastic
 set statusline+=%#warningmsg#
@@ -52,6 +56,7 @@ nnoremap <leader>ev :vsp $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>nn :set nonu<cr>
 nnoremap <leader>uu :set nu<cr>
+nnoremap <leader>= i//<esc>
 
 autocmd BufNewFile,BufRead *.sh :nnoremap <leader>= i#<esc>
-autocmd BufNewFile,BufRead *.go :nnoremap <leader>= i//<esc>
+"autocmd FileType vim :nnoremap <leader>= i"<esc>
