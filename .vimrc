@@ -50,8 +50,8 @@ inoremap <leader>ww <esc>:w<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>ev :vsp $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-snoremap <leader>nn :set nonu<cr>
-cnoremap <leader>uu :set nu<cr>
+nnoremap <leader>nn :set nonu<cr>
+nnoremap <leader>uu :set nu<cr>
 
 autocmd BufNewFile,BufRead *.sh :nnoremap <leader>= i#<esc>
 autocmd BufNewFile,BufRead *.go :nnoremap <leader>= i//<esc>
